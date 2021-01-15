@@ -21,7 +21,7 @@ pipeline {
                 docker { image 'mcr.microsoft.com/dotnet/core/sdk:3.1'}
             }
             steps {
-                sh 'echo Starting the Backend build & test'
+                sh 'echo "Starting the Backend build & test"'
                 sh 'dotnet --version'
                 sh 'dotnet build --configuration Release'
                 sh 'dotnet test'
