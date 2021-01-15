@@ -19,17 +19,17 @@ jobs:
       - name: Build .Net
         run: dotnet build --configuration Release
       - name: Install NPM packages
-        working-directory: ./DotnetTemplates.Web
+        working-directory: ./DotnetTemplate.Web
         run: npm install
       - name: Build Typescript
-        working-directory: ./DotnetTemplates.Web
+        working-directory: ./DotnetTemplate.Web
         run: npm build
       - name: Run .Net Tests
         run: dotnet test
       - name: Run Spec Tests
-        working-directory: ./DotnetTemplates.Web
+        working-directory: ./DotnetTemplate.Web
         run: npm t
       - name: Run Linting
-        working-directory: ./DotnetTemplates.Web
+        working-directory: ./DotnetTemplate.Web
         run: npm run lint
       
