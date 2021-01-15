@@ -1,5 +1,5 @@
 name: Continuous Integration
-on: push
+on: pull_request
 
 jobs:
   build:
@@ -23,7 +23,7 @@ jobs:
         run: npm install
       - name: Build Typescript
         working-directory: ./DotnetTemplate.Web
-        run: npm build
+        run: npm run build
       - name: Run .Net Tests
         run: dotnet test
       - name: Run Spec Tests
