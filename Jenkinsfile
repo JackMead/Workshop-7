@@ -19,7 +19,7 @@ pipeline {
         stage('Test C#'){
             agent {
                 docker {
-                    image 'mcr.microsoft.com/dotnet/core/sdk:3.1'
+                    image 'mcr.microsoft.com/dotnet/sdk:5.0'
                     args '-e DOTNET_CLI_HOME="/tmp/DOTNET_CLI_HOME"'
                 }
             }
