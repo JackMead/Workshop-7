@@ -14,6 +14,8 @@ pipeline {
                     sh "npm t"
                     sh "npm run lint"
                 }
+                sh "npm run test-with-coverage"
+                publishCoverage adapters: [istanbulCoberturaAdapter('DotnetTemplate.Web/coverage/cobertura-coverage.xml')]
             }
         }
         stage('Test C#'){
